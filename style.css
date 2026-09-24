@@ -3,7 +3,7 @@
   --sky-light: #d9f0fc;
   --yellow: #ffd23f;
   --ink: #0f2a43;
-  --paper: #fbfdff;
+  --paper: #fbf6e9;
   --muted: #3f5a73;
 }
 
@@ -60,12 +60,15 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; display: inline-block; border-botto
   position: relative; overflow: hidden; border-radius: 20px;
   border: 3px solid var(--ink); background: var(--paper);
   box-shadow: 10px 10px 0 var(--yellow);
+  touch-action: pan-y; user-select: none; -webkit-user-select: none;
 }
+.track.dragging { transition: none; }
 .track { display: flex; transition: transform .7s ease; }
 .slide { flex: 0 0 100%; position: relative; min-height: 340px; display: flex; align-items: center; }
 
 /* Photo on the left, fading and blurring towards the right */
 .slide img {
+  -webkit-user-drag: none;
   position: absolute; top: 0; left: 0; width: 62%; height: 100%; object-fit: cover;
   -webkit-mask-image: linear-gradient(to right, #000 35%, transparent);
           mask-image: linear-gradient(to right, #000 35%, transparent);
@@ -98,9 +101,19 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; display: inline-block; border-botto
 .slide.plain p { color: var(--ink); max-width: 55ch; margin: 0 auto; }
 
 /* Dots */
-.dots { position: absolute; bottom: .9rem; left: 0; right: 0; display: flex; justify-content: center; gap: .5rem; z-index: 2; }
-.dots button { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink); background: transparent; cursor: pointer; }
+.dots { pointer-events: none; position: absolute; bottom: .9rem; left: 0; right: 0; display: flex; justify-content: center; gap: .5rem; z-index: 2; }
+.dots button { pointer-events: auto; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink); background: transparent; cursor: pointer; }
 .dots button.active { background: var(--yellow); }
+
+/* Arrows */
+.arrow {
+  position: absolute; bottom: .55rem; z-index: 3; width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid var(--ink); background: var(--yellow); color: var(--ink);
+  font-size: 1.7rem; line-height: 1; cursor: pointer; display: grid; place-items: center; padding-bottom: 3px;
+}
+.arrow:hover { background: var(--sky); }
+.arrow.prev { left: .9rem; }
+.arrow.next { right: .9rem; }
 
 /* Contact */
 .contacts { list-style: none; display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.5rem; }
@@ -126,5 +139,5 @@ footer { margin-top: 4rem; padding: 2rem 1.5rem; background: var(--ink); color: 
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .track, .btn, .contacts a { transition: none; }
+  .btn, .contacts a { transition: none; }
 }
