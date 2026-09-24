@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,11 +32,7 @@
         <a class="btn btn-ghost" href="https://github.com/kiamajohnson" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-    <!-- Photo: save your picture as photo.jpg in this folder, then replace the div below with:
-         <img class="photo" src="photo.jpg" alt="Photo of Mwinji Kiama Johnson"> -->
-    <div>
-      <img class="photo" src="photo.jpeg" alt="Photo of Mwinji Kiama Johnson">
-    </div>
+    <img class="photo" src="photo.jpeg" alt="Photo of Mwinji Kiama Johnson">
   </div>
 </header>
 
@@ -43,46 +40,6 @@
   <section id="about">
     <h2>About me</h2>
     <p class="lead">I'm a recent Electrical and Electronics Engineering graduate who specialized in power. I enjoy building things that connect hardware and software, from circuits and sensors to web dashboards, and I'm looking to grow in tech-related fields.</p>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ol class="timeline">
-      <li class="c-teal">
-        <span class="when">May – Jul 2025</span>
-        <h3>Industrial Attachment, Meru County Government</h3>
-        <p>Attachment placement completed as part of my degree.</p>
-      </li>
-      <li class="c-violet">
-        <span class="when">Dec 2024 – Present</span>
-        <h3>Gold Level Consultant, WorldQuant BRAIN</h3>
-        <p>Joined the program in December 2024 and progressed from Bronze to Silver to Gold level.</p>
-      </li>
-      <li class="c-coral">
-        <span class="when">May – Jul 2024</span>
-        <h3>Industrial Attachment, Meru Dairy Co-operative</h3>
-        <p>Attachment placement completed as part of my degree.</p>
-      </li>
-      <li class="c-yellow">
-        <span class="when">May – Jul 2023</span>
-        <h3>Industrial Attachment, Kenya Power and Lighting Company (KPLC)</h3>
-        <p>Attachment placement completed as part of my degree.</p>
-      </li>
-    </ol>
-  </section>
-
-  <section id="project">
-    <h2>Featured project</h2>
-    <article class="project">
-      <h3>Smart Farm System <span>Final year project</span></h3>
-      <p>A system that gives farmers real-time data about their farm and automates tasks such as irrigation. I integrated several sensors and a microprocessor, and built a website that displays the live readings.</p>
-      <ul class="tags">
-        <li>Sensors</li>
-        <li>Microprocessor</li>
-        <li>Web dashboard</li>
-        <li>Automated irrigation</li>
-      </ul>
-    </article>
   </section>
 
   <section id="education">
@@ -93,27 +50,115 @@
     </div>
   </section>
 
+  <!-- Change data-interval (milliseconds) to make slides stay longer or shorter -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="carousel" data-interval="2000" aria-label="Experience">
+      <div class="track">
+        <div class="slide">
+          <img src="exp-county.jpeg" alt="Meru County Government attachment" onerror="this.style.display='none'">
+          <div class="text">
+            <span class="when">May – Jul 2025</span>
+            <h3>Industrial Attachment, Meru County Government</h3>
+            <p>Attachment placement completed as part of my degree.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="exp-worldquant.jpeg" alt="WorldQuant BRAIN program" onerror="this.style.display='none'">
+          <div class="text">
+            <span class="when">Dec 2024 – Present</span>
+            <h3>Gold Level Consultant, WorldQuant BRAIN</h3>
+            <p>Joined in December 2024 and progressed from Bronze to Silver to Gold level.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="exp-meru-dairy.jpeg" alt="Meru Dairy Co-operative attachment" onerror="this.style.display='none'">
+          <div class="text">
+            <span class="when">May – Jul 2024</span>
+            <h3>Industrial Attachment, Meru Dairy Co-operative</h3>
+            <p>Attachment placement completed as part of my degree.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="exp-kplc.jpeg" alt="Kenya Power and Lighting Company attachment" onerror="this.style.display='none'">
+          <div class="text">
+            <span class="when">May – Jul 2023</span>
+            <h3>Industrial Attachment, Kenya Power and Lighting Company</h3>
+            <p>Attachment placement completed as part of my degree.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <h2>Featured project: Smart Farm System</h2>
+    <p class="lead intro">My final year project gives farmers real-time data about their farm and automates tasks such as irrigation.</p>
+    <div class="carousel" data-interval="2000" aria-label="Smart Farm System">
+      <div class="track">
+        <div class="slide rev">
+          <img src="sensors.jpg" alt="Smart Farm sensors" onerror="this.style.display='none'">
+          <div class="text">
+            <h3>Sensors</h3>
+            <p>Sensors in the field measure conditions on the farm and feed live readings into the system.</p>
+          </div>
+        </div>
+        <div class="slide rev">
+          <img src="microprocessor.jpeg" alt="Smart Farm microprocessor" onerror="this.style.display='none'">
+          <div class="text">
+            <h3>Microprocessor</h3>
+            <p>A microprocessor collects the sensor data and controls the connected equipment.</p>
+          </div>
+        </div>
+        <div class="slide rev">
+          <img src="dashboard.jpeg" alt="Smart Farm web dashboard" onerror="this.style.display='none'">
+          <div class="text">
+            <h3>Web dashboard</h3>
+            <p>A website shows the farm's readings in real time so farmers can check them from anywhere.</p>
+          </div>
+        </div>
+        <div class="slide rev">
+          <img src="irrigation.jpeg" alt="Smart Farm automated irrigation" onerror="this.style.display='none'">
+          <div class="text">
+            <h3>Automated irrigation</h3>
+            <p>Irrigation switches on and off automatically based on what the sensors report.</p>
+          </div>
+        </div>
+        <div class="slide rev">
+          <img src="ai.jpeg" alt="AI integration in the Smart Farm" onerror="this.style.display='none'">
+          <div class="text">
+            <h3>AI integration</h3>
+            <p>AI analyses the farm data to support smarter decisions about watering and crop care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="skills">
     <h2>Skills</h2>
-    <ul class="chips">
-      <li class="c-yellow">AutoCAD Electrical</li>
-      <li class="c-teal">MATLAB</li>
-      <li class="c-coral">KiCad</li>
-      <li class="c-violet">Power systems</li>
-      <li class="c-teal">Sensor integration</li>
-      <li class="c-coral">Web development</li>
-      <li class="c-yellow">Quantitative research (WorldQuant BRAIN)</li>
-    </ul>
+    <div class="carousel skills" data-interval="3000" aria-label="Skills">
+      <div class="track">
+        <div class="slide plain"><div class="text"><h3>AutoCAD Electrical</h3><p>Drawing and documenting electrical schematics and control circuits.</p></div></div>
+        <div class="slide plain"><div class="text"><h3>MATLAB</h3><p>Modelling, simulating and analysing engineering problems.</p></div></div>
+        <div class="slide plain"><div class="text"><h3>KiCad</h3><p>Designing circuit schematics and PCB layouts.</p></div></div>
+        <div class="slide plain"><div class="text"><h3>Power systems</h3><p>My degree specialization: how electricity is generated, transmitted and distributed.</p></div></div>
+        <div class="slide plain"><div class="text"><h3>Sensor integration</h3><p>Connecting sensors to microprocessors to collect real-world data.</p></div></div>
+        <div class="slide plain"><div class="text"><h3>Web development</h3><p>Building websites that display live data and reports.</p></div></div>
+        <div class="slide plain"><div class="text"><h3>Quantitative research</h3><p>Developing and testing ideas on the WorldQuant BRAIN platform, at Gold level.</p></div></div>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p class="lead">Open to graduate roles, internships and collaborations.</p>
-    <div class="cta">
-      <a class="btn btn-yellow" href="mailto:jkiama746@gmail.com">jkiama746@gmail.com</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/johnson-kiama-06681334a" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-ghost" href="https://github.com/kiamajohnson" target="_blank" rel="noopener">GitHub</a>
-    </div>
+    <ul class="contacts">
+      <li><a href="mailto:jkiama746@gmail.com"><i class="fa-solid fa-envelope"></i> jkiama746@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/johnson-kiama-06681334a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/kiamajohnson" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="https://wa.me/254700408600" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +254 700408600</a></li>
+    </ul>
   </section>
 </main>
 
@@ -121,5 +166,6 @@
   <p>&copy; 2026 Mwinji Kiama Johnson</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
